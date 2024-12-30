@@ -1,0 +1,21 @@
+﻿<Application x:Class="DarkAndWhite2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:properties="clr-namespace:DarkAndWhite"
+             xmlns:local="clr-namespace:DarkAndWhite2"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Source={x:Static properties:app.Default},Path=ColorMode }" Value="Black">
+                    <Setter Property="Background" Value="Black"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Source={x:Static properties:app.Default},Path=ColorMode }" Value="Dark">
+                    <Setter Property="Background" Value="#363C49"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>

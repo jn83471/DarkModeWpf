@@ -1,0 +1,47 @@
+﻿<Window x:Class="DarkAndWhite.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DarkAndWhite"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400">
+    <GroupBox Header="Group">
+        <UniformGrid Rows="7"
+                     HorizontalAlignment="Center">
+            <Button Content="Button"
+                    Height="50"
+                    Width="100"/>
+            <TextBlock Text="text"
+                       HorizontalAlignment="Stretch"
+                       Height="20"/>
+            <TextBox Text="Some Text"
+                     Height="20"/>
+            <RadioButton x:Name="BlackMode" 
+                         Content="Black Mode"
+                         HorizontalAlignment="Center"
+                         Height="20"
+                         IsChecked="True"
+                         GroupName="modeSelection"
+                         Checked="BlackMode_Checked"/>
+            <RadioButton x:Name="DarkMode" 
+                         Content="Dark Mode"
+                         HorizontalAlignment="Center"
+                         Height="20"
+                         GroupName="modeSelection"
+                         Checked="DarkMode_Checked"/>
+            <RadioButton x:Name="LightMode" 
+                         Content="Light Mode"
+                         HorizontalAlignment="Center"
+                         Height="20"
+                         GroupName="modeSelection"
+                         Checked="LightMode_Checked"/>
+            <RadioButton x:Name="WhiteMode" 
+                         Content="White Mode"
+                         HorizontalAlignment="Center"
+                         Height="20"
+                         GroupName="modeSelection"
+                         Checked="WhiteMode_Checked"/>
+        </UniformGrid>
+    </GroupBox>
+</Window>
